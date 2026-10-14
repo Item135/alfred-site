@@ -8,7 +8,22 @@
   --accent-hover: #1a43ad;
   --radius: 10px;
   --max: 1040px;
+  --faint: #8a94a3;
+  --header-bg: rgba(255, 255, 255, 0.92);
   --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body.dark {
+  --bg: #0f141b;
+  --bg-alt: #161d27;
+  --text: #e4e8ee;
+  --muted: #a3adbb;
+  --faint: #7d8796;
+  --border: #2a3441;
+  --accent: #7aa2ff;
+  --accent-hover: #a3c0ff;
+  --header-bg: rgba(15, 20, 27, 0.92);
+  color-scheme: dark;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -48,7 +63,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(255, 255, 255, 0.92);
+  background: var(--header-bg);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--border);
 }
@@ -66,6 +81,17 @@ ul { list-style: none; margin: 0; padding: 0; }
 .nav-links { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; font-size: 0.95rem; }
 .nav-links a { color: var(--muted); }
 .nav-links a:hover { color: var(--text); text-decoration: none; }
+.theme-toggle {
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
 
 /* Hero */
 .hero { padding: 5rem 0 4.5rem; }
@@ -87,6 +113,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 .btn:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
 .btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
 .btn-primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); color: #fff; }
+body.dark .btn-primary, body.dark .btn-primary:hover { color: #0f141b; }
 
 /* Sections */
 .section { padding: 4rem 0; scroll-margin-top: 4rem; }
@@ -106,7 +133,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 .timeline { display: grid; gap: 1.25rem; margin-top: 0.75rem; }
 .timeline > li { padding-left: 1rem; border-left: 2px solid var(--border); }
 .timeline-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 1rem; }
-.timeline .when { color: #8a94a3; font-size: 0.9rem; font-style: italic; }
+.timeline .when { color: var(--faint); font-size: 0.9rem; font-style: italic; }
 .timeline p { color: var(--muted); margin: 0.15rem 0 0; }
 .bullets { list-style: disc; padding-left: 1.25rem; margin-top: 0.4rem; color: var(--muted); }
 .bullets li + li { margin-top: 0.25rem; }
