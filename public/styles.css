@@ -208,6 +208,7 @@ body.dark .btn-primary, body.dark .btn-primary:hover { color: #0f141b; }
 .post-body { padding-bottom: 4rem; }
 .post-body h2 { margin-top: 2.5rem; font-size: clamp(1.25rem, 3vw, 1.5rem); }
 .post-body .link-row { margin-top: 1rem; }
+.photo-credit { margin-top: 2.5rem; font-size: 0.875rem; font-style: italic; color: var(--muted); }
 .post-figure { margin: 1.5rem 0; }
 .post-figure img {
   display: block;
