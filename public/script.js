@@ -7,6 +7,17 @@
 
   document.getElementById('year').textContent = new Date().getFullYear();
 
+  // Project cards show at most 50 characters of their description; the full
+  // text stays in the HTML and is offered as a tooltip.
+  var MAX_DESC = 50;
+  Array.prototype.forEach.call(document.querySelectorAll('.card-desc'), function (p) {
+    var full = p.textContent.trim();
+    if (full.length > MAX_DESC) {
+      p.title = full;
+      p.textContent = full.slice(0, MAX_DESC).trimEnd() + '...';
+    }
+  });
+
   function showMessage(text) {
     list.innerHTML = '';
     var p = document.createElement('p');

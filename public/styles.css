@@ -166,6 +166,17 @@ body.dark .btn-primary, body.dark .btn-primary:hover { color: #0f141b; }
   background: var(--bg);
   min-width: 0;
 }
+.card-thumb {
+  display: block;
+  width: calc(100% + 2.7rem);
+  max-width: none;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  margin: -1.25rem -1.35rem 1rem;
+  border-bottom: 1px solid var(--border);
+  border-radius: var(--radius) var(--radius) 0 0;
+}
 .card h3 { overflow-wrap: anywhere; }
 .card p { color: var(--muted); font-size: 0.975rem; flex-grow: 1; }
 .card-link { font-weight: 600; font-size: 0.95rem; }
