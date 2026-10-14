@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NoScroll | Alfred Yap</title>
+  <meta name="description" content="NoScroll: a gamified Android focus timer with app blocking, built in a team of six.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <script>
+    // Apply the saved theme before first paint to avoid a light flash.
+    try { if (sessionStorage.getItem('theme') === 'dark') document.body.classList.add('dark'); } catch (e) {}
+  </script>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="nav-brand" href="../index.html">Alfred Yap</a>
+      <ul class="nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#repos">Repos</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">Dark mode</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="post">
+      <header class="post-header container narrow">
+        <a class="back-link" href="../index.html#projects">&larr; All projects</a>
+        <p class="eyebrow">Team project &middot; SIT</p>
+        <h1>NoScroll</h1>
+        <p class="tagline">Stop scrolling and start focusing! A gamified focus timer that blocks distracting apps.</p>
+        <p class="post-meta">Kotlin &middot; Jetpack Compose &middot; Firebase &middot; Android Studio</p>
+      </header>
+
+      <div class="container post-hero">
+        <div class="figure-row">
+          <figure class="post-figure">
+            <img src="../images/noscroll/home.png" alt="NoScroll home screen showing study summary, active pet and Start Studying button" width="400" height="900">
+          </figure>
+          <figure class="post-figure">
+            <img src="../images/noscroll/focus-session.png" alt="Focus session screen with a 59:56 countdown and Abort, Pause and Edit buttons" width="403" height="886">
+          </figure>
+          <figure class="post-figure">
+            <img src="../images/noscroll/gacha.png" alt="Pet gacha screen with coin balance and roll buttons" width="400" height="907">
+          </figure>
+        </div>
+      </div>
+
+      <div class="container narrow post-body">
+        <h2>Overview</h2>
+        <p>NoScroll is an Android app that helps students stay off their phones while studying. You start a focus session, distracting apps are blocked while the timer runs, and finishing sessions earns coins and experience for a virtual pet companion.</p>
+        <p>It was built by a team of six as a university project, using Kotlin with Jetpack Compose for the UI and Firebase for accounts and data.</p>
+
+        <h2>What I worked on</h2>
+        <ul class="bullets">
+          <li>Key screens and flows: registration fields, FAQ, study-session setup, and the home screen with pet display and navigation.</li>
+          <li>Pet gacha mechanics, including the roll result presentation and animation.</li>
+          <li>Leaderboard display for the social features.</li>
+          <li>Integrating my parts with the rest of the team&rsquo;s work.</li>
+        </ul>
+
+        <h2>Development</h2>
+        <p>The gacha screen is driven by a small UI state machine (idle, animating, showing result), which kept the roll animation and result screen easy to reason about.</p>
+        <figure class="post-figure">
+          <img src="../images/noscroll/android-studio.jpg" alt="Android Studio with Gacha.kt open and the app running in the emulator" width="1600" height="869" loading="lazy">
+          <figcaption>Working on the gacha screen in Android Studio, with the app running in the emulator.</figcaption>
+        </figure>
+
+        <h2>Links</h2>
+        <ul class="link-row">
+          <li><a class="btn btn-primary" href="https://youtu.be/3u0yodyBZUU" target="_blank" rel="noopener">Watch the demo</a></li>
+        </ul>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Yap Hong Xiang, Alfred</p>
+    </div>
+  </footer>
+
+  <script src="../theme.js"></script>
+</body>
+</html>

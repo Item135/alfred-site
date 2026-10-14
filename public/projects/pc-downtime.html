@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PC Downtime | Alfred Yap</title>
+  <meta name="description" content="PC Downtime: a Windows utility that schedules breaks by locking, sleeping or shutting down the PC.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <script>
+    // Apply the saved theme before first paint to avoid a light flash.
+    try { if (sessionStorage.getItem('theme') === 'dark') document.body.classList.add('dark'); } catch (e) {}
+  </script>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="nav-brand" href="../index.html">Alfred Yap</a>
+      <ul class="nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#repos">Repos</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">Dark mode</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="post">
+      <header class="post-header container narrow">
+        <a class="back-link" href="../index.html#projects">&larr; All projects</a>
+        <p class="eyebrow">Personal project</p>
+        <h1>PC Downtime</h1>
+        <p class="tagline">Automatically lock, sleep or shut down your PC for a timely break.</p>
+        <p class="post-meta">Python &middot; Tkinter &middot; Windows &middot; Claude Code</p>
+      </header>
+
+      <div class="container post-hero">
+        <figure class="post-figure">
+          <img src="../images/pc-downtime/main-window.png" alt="PC Downtime Manager main window with a weekly day picker, a timeline bar and a list of scheduled downtimes" width="691" height="430">
+        </figure>
+      </div>
+
+      <div class="container narrow post-body">
+        <h2>Overview</h2>
+        <p>PC Downtime is a small Windows utility that schedules breaks away from the computer. Each downtime has a name, a time window and an action: lock, sleep or shut down. When a downtime starts, the app warns you, counts down, then takes the action for you.</p>
+        <p>It started from a personal problem: &ldquo;one more minute&rdquo; at the desk easily becomes an hour. Most timers are too easy to dismiss, so the core design question was how to make skipping a break possible, but deliberately inconvenient.</p>
+
+        <h2>Requirements first</h2>
+        <p>Before writing any code I wrote the specification: 17 functional and 4 non-functional requirements, 5 use-case scenarios and 4 UI layout pages. I sketched the screens as pixel mockups in Aseprite so the layout was settled before implementation.</p>
+        <figure class="post-figure">
+          <img src="../images/pc-downtime/ui-draft.png" alt="Pixel-art mockups of the main window, edit dialog and settings page drawn in Aseprite" width="1600" height="900" loading="lazy">
+          <figcaption>Early UI mockups for the main window, edit dialog and settings, drawn in Aseprite.</figcaption>
+        </figure>
+
+        <h2>Adding friction</h2>
+        <p>When a downtime is about to start, a popup counts down and offers <em>Lock Now</em>, <em>Snooze</em> or <em>Cancel</em>. Snoozing and cancelling are allowed, but each use adds a delay before the buttons can be pressed again, so repeatedly bypassing a break gets slower every time.</p>
+        <div class="figure-row">
+          <figure class="post-figure">
+            <img src="../images/pc-downtime/warning-popup.png" alt="Warning popup: Lunch, locking in 0:29, with Lock Now, Snooze and Cancel buttons" width="313" height="166" loading="lazy">
+            <figcaption>Warning before a downtime starts.</figcaption>
+          </figure>
+          <figure class="post-figure">
+            <img src="../images/pc-downtime/cancel-confirm.png" alt="Confirmation dialog asking whether to cancel the current downtime or all downtimes for today" width="411" height="220" loading="lazy">
+            <figcaption>Cancelling asks you to reconsider first.</figcaption>
+          </figure>
+        </div>
+        <p>The settings page exposes the warning, snooze and check durations, the friction delays, the daily reset time and a 24-hour clock option. The app lives in the system tray so it keeps running in the background.</p>
+        <figure class="post-figure">
+          <img src="../images/pc-downtime/settings.png" alt="Settings window with sliders for warning, snooze and check durations and delay-friction options" width="669" height="473" loading="lazy">
+          <figcaption>Settings, including the delay-friction controls.</figcaption>
+        </figure>
+        <figure class="post-figure small">
+          <img src="../images/pc-downtime/tray.png" alt="Windows system tray showing the PC Downtime icon" width="211" height="115" loading="lazy">
+          <figcaption>Runs quietly from the system tray.</figcaption>
+        </figure>
+
+        <h2>Building it with Claude Code</h2>
+        <p>I used Claude Code to generate the implementation from my requirements, then reviewed the code and manually tested each behaviour against the specification. The project was a good exercise in writing requirements precise enough for someone else, human or AI, to build from.</p>
+
+        <h2>Links</h2>
+        <ul class="link-row">
+          <li><a class="btn btn-primary" href="https://github.com/Item135/pc-downtime" target="_blank" rel="noopener">View on GitHub</a></li>
+        </ul>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Yap Hong Xiang, Alfred</p>
+    </div>
+  </footer>
+
+  <script src="../theme.js"></script>
+</body>
+</html>

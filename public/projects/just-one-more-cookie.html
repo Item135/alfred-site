@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Just One More Cookie | Alfred Yap</title>
+  <meta name="description" content="Just One More Cookie: a platformer made for Brackeys Game Jam 2025.2.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <script>
+    // Apply the saved theme before first paint to avoid a light flash.
+    try { if (sessionStorage.getItem('theme') === 'dark') document.body.classList.add('dark'); } catch (e) {}
+  </script>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="nav-brand" href="../index.html">Alfred Yap</a>
+      <ul class="nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#repos">Repos</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">Dark mode</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="post">
+      <header class="post-header container narrow">
+        <a class="back-link" href="../index.html#projects">&larr; All projects</a>
+        <p class="eyebrow">Game jam &middot; Brackeys Game Jam 2025.2</p>
+        <h1>Just One More Cookie</h1>
+        <p class="tagline">Eat cookies, gain weight, get the Coo-KEY, and complete this simple yet novel platformer!</p>
+        <p class="post-meta">Godot &middot; Aseprite &middot; Pixel art</p>
+      </header>
+
+      <div class="container post-hero">
+        <figure class="post-figure">
+          <img src="../images/just-one-more-cookie/brackeys-2025-2.jpg" alt="Brackeys Game Jam 2025.2 banner" width="1378" height="1080">
+        </figure>
+      </div>
+
+      <div class="container narrow post-body">
+        <h2>Overview</h2>
+        <p>Just One More Cookie is a short platformer made for Brackeys Game Jam 2025.2. Eating cookies makes the character heavier, which changes how they move, so each cookie is both a reward and a trade-off on the way to the Coo-KEY that unlocks the exit.</p>
+
+        <h2>My role</h2>
+        <ul class="bullets">
+          <li>Came up with the game concept and core mechanics.</li>
+          <li>Created the character sprites, tiles, props and animations in Aseprite.</li>
+          <li>Worked with the developer on implementation and level design in Godot.</li>
+        </ul>
+
+        <h2>Art</h2>
+        <figure class="post-figure">
+          <img src="../images/just-one-more-cookie/asset-draft.png" alt="Aseprite canvas with character sprites, cookies, key, door and level tiles" width="1600" height="899" loading="lazy">
+          <figcaption>Draft sprite sheet: the character in three sizes, cookies, the key, the door and level tiles.</figcaption>
+        </figure>
+
+        <h2>Links</h2>
+        <ul class="link-row">
+          <li><a class="btn btn-primary" href="https://alanx0401.itch.io/just-one-more-cookie" target="_blank" rel="noopener">Play on itch.io</a></li>
+        </ul>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Yap Hong Xiang, Alfred</p>
+    </div>
+  </footer>
+
+  <script src="../theme.js"></script>
+</body>
+</html>

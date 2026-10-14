@@ -7,22 +7,6 @@
 
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Dark-mode toggle. The choice lasts for the browser session (sessionStorage).
-  var toggle = document.getElementById('theme-toggle');
-
-  function syncToggle() {
-    var dark = document.body.classList.contains('dark');
-    toggle.textContent = dark ? 'Light mode' : 'Dark mode';
-    toggle.setAttribute('aria-pressed', String(dark));
-  }
-
-  toggle.addEventListener('click', function () {
-    var dark = document.body.classList.toggle('dark');
-    try { sessionStorage.setItem('theme', dark ? 'dark' : 'light'); } catch (e) {}
-    syncToggle();
-  });
-  syncToggle();
-
   function showMessage(text) {
     list.innerHTML = '';
     var p = document.createElement('p');
