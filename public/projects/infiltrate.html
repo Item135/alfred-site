@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Infiltrate | Alfred Yap</title>
+  <meta name="description" content="Infiltrate: a retro-style escape game that placed 10th at the JCU 5th Retro Inspired Game Jam.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <script>
+    // Apply the saved theme before first paint to avoid a light flash.
+    try { if (sessionStorage.getItem('theme') === 'dark') document.body.classList.add('dark'); } catch (e) {}
+  </script>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="nav-brand" href="../index.html">Alfred Yap</a>
+      <ul class="nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#repos">Repos</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">Dark mode</button>
+    </nav>
+  </header>
+
+  <main>
+    <article class="post">
+      <header class="post-header container narrow">
+        <a class="back-link" href="../index.html#projects">&larr; All projects</a>
+        <p class="eyebrow">Game jam &middot; 10th place</p>
+        <h1>Infiltrate</h1>
+        <p class="tagline">Experimented on in an unknown lab: will you keep your humanity and escape, or take a heartless path of revenge as a cyborg?</p>
+        <p class="post-meta">Unity &middot; James Cook University 5th Retro Inspired Game Jam, 8&ndash;10 Nov 2019</p>
+      </header>
+
+      <div class="container post-hero">
+        <figure class="post-figure">
+          <img src="../images/infiltrate/retro-inspired-2019.jpg" alt="5th Retro Inspired 2019 event banner, 8 to 10 November 2019" width="924" height="463">
+        </figure>
+      </div>
+
+      <div class="container narrow post-body">
+        <h2>Overview</h2>
+        <p>Infiltrate was made over a weekend at the 5th Retro Inspired Game Jam hosted by James Cook University Singapore. Our team built a retro-style, story-driven escape game with two paths: escape and keep your humanity, or turn cyborg and take revenge. It placed 10th.</p>
+
+        <h2>At the jam</h2>
+        <figure class="post-figure">
+          <img src="../images/infiltrate/team-discussion.jpg" alt="Game jam participants discussing sprite work around a laptop" width="1600" height="1068" loading="lazy">
+          <figcaption>Working through ideas and sprites during the jam.</figcaption>
+        </figure>
+        <figure class="post-figure">
+          <img src="../images/infiltrate/unity-in-progress.jpg" alt="Laptop running Unity with a pixel-art level in the scene view" width="1600" height="1068" loading="lazy">
+          <figcaption>Brainstorming the level appearance in Unity.</figcaption>
+        </figure>
+        <p>The event also included a special guest Mike Pondsmith, creator of the Cyberpunk tabletop game. He also conducted a public lecture for all participants after the Game Jam.</p>
+        <div class="figure-row">
+          <figure class="post-figure">
+            <img src="../images/infiltrate/public-lecture.jpg" alt="Mike Pondsmith speaking into a microphone beside the Retro Inspired banner" width="700" height="445" loading="lazy">
+            <figcaption>Public lecture at the event.</figcaption>
+          </figure>
+          <figure class="post-figure">
+            <img src="../images/infiltrate/guest-speaker.jpg" alt="Mike Pondsmith seated in front of the Retro Inspired 2019 banner" width="1600" height="1067" loading="lazy">
+            <figcaption>Guest speaker Mike Pondsmith.</figcaption>
+          </figure>
+        </div>
+
+        <h2>Links</h2>
+        <ul class="link-row">
+          <li><a class="btn btn-primary" href="https://www.jcu.edu.sg/news/releases/highlights-from-the-5th-retro-inspired" target="_blank" rel="noopener">Read the JCU event highlights</a></li>
+        </ul>
+
+        <p class="photo-credit">Photos: James Cook University Singapore, from the <a href="https://www.facebook.com/media/set/?set=a.2898670786811985&amp;type=3" target="_blank" rel="noopener">5th Retro Inspired public album on Facebook</a>.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Yap Hong Xiang, Alfred</p>
+    </div>
+  </footer>
+
+  <script src="../theme.js"></script>
+</body>
+</html>
